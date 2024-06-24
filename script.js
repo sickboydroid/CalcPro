@@ -96,22 +96,20 @@ function getDecimalsCount() {
   if (prob < 0.2) return 0;
   else if (prob < 0.4) return 1;
   else if (prob < 0.8) return 2;
-  else if (prob < 0.95) return 3;
-  return 4;
+  return 3;
 }
 
 function getUpperBound() {
   const prob = Math.random();
-  if (prob < 0.75) return 100;
-  else if (prob < 0.95) return 500;
+  if (prob < 0.5) return 10;
+  else if(prob < 0.98) return 100;
   return 1000;
 }
 
 function getTermsCount() {
   const prob = Math.random();
   if (prob < 0.25) return 2;
-  if (prob < 0.75) return 3;
-  return 4;
+  return 3;
 }
 
 document.addEventListener("keydown", function (event) {
